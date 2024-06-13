@@ -1,0 +1,8 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/aungphonekhant/Code/C/giveTheValueOfSin'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _calculateFactoiral, symObjAddr: 0x0, symBinAddr: 0x100003D10, symSize: 0x7C }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _calculateFactoiral, symObjAddr: 0x0, symBinAddr: 0x100003D10, symSize: 0x7C }
+  - { offsetInCU: 0x93, offset: 0x93, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x7C, symBinAddr: 0x100003D8C, symSize: 0x18C }
+...

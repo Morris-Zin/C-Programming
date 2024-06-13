@@ -1,0 +1,8 @@
+# Ignore all files ending with .exe
+*.exe
+
+# Ignore all files ending with .exec
+*.exec
+
+# Ignore all files ending with .txt
+*.txt
