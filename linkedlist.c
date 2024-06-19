@@ -42,11 +42,21 @@ list* arrayToList (int array[], int size){
     return head; 
 }
 
+void addAtTheEnd (int d, list *head)  {
+    list *temporary = createList(d); 
+    list *ptr; 
+    ptr = head; 
+    while(ptr -> next != NULL) { 
+        ptr = ptr -> next; 
+    }
+    ptr -> next = temporary; 
+}
 
 int main(void)
 {
     int data[8] = {1,2,3,4,5,6,7,8}; 
     list *head = arrayToList(data, 8); 
+    addAtTheEnd(132, head); 
     printf("Linked List\n"); 
     printList(head, "Printed the single linekd List "); 
     return 0;
