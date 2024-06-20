@@ -52,11 +52,41 @@ void addAtTheEnd (int d, list *head)  {
     ptr -> next = temporary; 
 }
 
+void addAtTheIndex (int position, list *head, int data) { 
+    list *temporary = createList(data); 
+    list *ptr = head; 
+    position --; 
+    int count = 1; 
+    while(count < position) { 
+        ptr = ptr -> next; 
+        count ++ ;
+    }
+    temporary -> next = ptr -> next; 
+    ptr -> next = temporary; 
+}
+
+void deleteAtThePosition (int position, list *head){ 
+    position --; 
+    int count = 0; 
+    list *ptr = head; 
+    list *temporary; 
+    while(count < position) { 
+         ptr = ptr -> next; 
+        count ++; 
+    }
+    temporary = (ptr -> next) -> next; 
+    (ptr ->next) -> next = NULL; 
+    ptr->next = temporary; 
+}
+
 int main(void)
 {
     int data[8] = {1,2,3,4,5,6,7,8}; 
     list *head = arrayToList(data, 8); 
     addAtTheEnd(132, head); 
+    addAtTheIndex(2, head, 231); 
+    addAtTheIndex(2, head, 321); 
+    deleteAtThePosition(4, head); 
     printf("Linked List\n"); 
     printList(head, "Printed the single linekd List "); 
     return 0;
